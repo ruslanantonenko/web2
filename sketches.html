@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R. Antonenko — Sketches &amp; Process</title>
+  <meta name="description" content="Sketches gallery of R. Antonenko. A collection of hand-drawn concepts, architectural studies, and object designs.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=1.0.1">
+</head>
+<body class="theme-light">
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <span class="logo-title">R. ANTONENKO</span>
+        <span class="logo-subtitle" data-i18n="logo-subtitle">BLEND PRACTICE</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <a href="index.html#about" class="nav-link" data-i18n="nav-about">About</a>
+        <a href="index.html#works" class="nav-link" data-i18n="nav-works">Works</a>
+        <a href="sketches.html" class="nav-link active-page" data-i18n="nav-sketches">Sketches</a>
+        <a href="index.html#contact" class="nav-link" data-i18n="nav-contact">Contact</a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="header-controls">
+        <!-- Language Toggle -->
+        <button id="lang-toggle" aria-label="Switch language" class="control-btn lang-btn">
+          <span id="lang-label">УК</span>
+        </button>
+
+        <button id="theme-toggle" aria-label="Toggle Theme" class="control-btn">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button id="mobile-menu-btn" aria-label="Open Mobile Menu" class="control-btn">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <nav class="mobile-nav">
+      <a href="index.html#about" class="mobile-link" data-i18n="nav-about">About</a>
+      <a href="index.html#works" class="mobile-link" data-i18n="nav-works">Works</a>
+      <a href="sketches.html" class="mobile-link" data-i18n="nav-sketches">Sketches</a>
+      <a href="index.html#contact" class="mobile-link" data-i18n="nav-contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Sketches Header Section -->
+  <section class="sketches-page-header section-padding" style="padding-bottom: 40px; padding-top: 180px;">
+    <div class="section-container">
+      <div class="scroll-reveal">
+        <span class="section-meta" data-i18n="sketches-meta">CREATIVE PROCESS</span>
+        <h1 class="section-title" data-i18n="sketches-page-title" style="font-size: 56px; font-weight: 300;">The Sketchbook</h1>
+        <p class="sketches-page-desc" data-i18n="sketches-page-desc" style="max-width: 680px; font-size: 18px; font-weight: 300; line-height: 1.6; color: var(--text-secondary); margin-top: 24px;">
+          A living archive of hand-drawn studies, architectural concepts, and raw form experiments. These charcoal, graphite, and ink drawings represent the translation of initial spatial thoughts into physical proportions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Masonry Grid Gallery -->
+  <section class="sketches-gallery-section" style="padding-bottom: 140px;">
+    <div class="section-container">
+      <div class="sketches-grid scroll-reveal delay-1" id="sketches-grid">
+        <!-- JavaScript will dynamically render items here for ease of updating -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Fullscreen Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightbox-close-backdrop"></div>
+    <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close Lightbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+    
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev-btn" aria-label="Previous sketch">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="19" y1="12" x2="5" y2="12" />
+        <polyline points="12 19 5 12 12 5" />
+      </svg>
+    </button>
+
+    <button class="lightbox-nav lightbox-next" id="lightbox-next-btn" aria-label="Next sketch">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="5" y1="12" x2="19" y2="12" />
+        <polyline points="12 5 19 12 12 19" />
+      </svg>
+    </button>
+
+    <div class="lightbox-content">
+      <div class="lightbox-image-wrapper">
+        <img id="lightbox-img" src="" alt="Sketch Large View">
+      </div>
+      <div class="lightbox-details">
+        <span id="lightbox-counter">1 / 6</span>
+        <h3 id="lightbox-title" class="font-serif">Sketch Title</h3>
+        <p id="lightbox-caption">Description text goes here.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="copyright" data-i18n="footer-copy">&copy; 2026 R. Antonenko. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#" class="footer-link">Instagram</a>
+        <a href="#" class="footer-link">LinkedIn</a>
+        <a href="#" class="footer-link" data-i18n="footer-journal">Journal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=1.0.1"></script>
+</body>
+</html>
