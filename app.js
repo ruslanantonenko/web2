@@ -79,7 +79,7 @@ const translations = {
     'modal-phase':       'Phase',
     'modal-year':        'Year',
     'footer-copy':       '© 2026 R. Antonenko. All rights reserved.',
-    'footer-journal':    'Journal',
+    'footer-journal':    'Behance',
   },
   uk: {
     'logo-subtitle':     'КОМБІНОВАНА ПРАКТИКА',
@@ -158,7 +158,7 @@ const translations = {
     'modal-phase':       'Фаза',
     'modal-year':        'Рік',
     'footer-copy':       '© 2026 Р. Антоненко. Усі права захищені.',
-    'footer-journal':    'Журнал',
+    'footer-behance':    'Behance',
   }
 };
 
