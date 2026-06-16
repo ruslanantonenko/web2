@@ -398,7 +398,7 @@ const projectData = [
     category: "URBAN STUDIES",
     phase: "Fine Art Series",
     year: "2026",
-    image: "assets/Urban studies.png",
+    image: "assets/urban studies.png",
     description: "Captured on a medium-format camera using black-and-white film, this Urban studies series studies the geometric shadow play cast across modular concrete archways. Clean geometric shadows slice through structures, transforming raw concrete slabs into high-contrast canvases of pure light. The grain of the film accentuates the textures of the formwork."
   },
    {
